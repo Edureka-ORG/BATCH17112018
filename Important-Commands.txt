@@ -18,5 +18,7 @@ cd /etc/hadoop/conf
 
 1) GITHUB
 2) SBT : https://1drv.ms/f/s!AqpaeaxFd6hUgnozsMeEGnfC3QUQ
+			SBT : https://onedrive.live.com/redir?resid=54A87745AC795AAA%21378&authkey=%21ADOwx4Qad8LdBRA&page=View&wd=target%28Quick%20Notes.one%7Cd7d57b7a-f894-455b-8f20-d780f4b23482%2FSBT%7C3a4ebe55-8375-4c23-a424-ac46de3bb102%2F%29&wdorigin=703
+			Create a Project in eclipse using SBT : https://onedrive.live.com/redir?resid=54A87745AC795AAA%21378&authkey=%21ADOwx4Qad8LdBRA&page=View&wd=target%28Quick%20Notes.one%7Cd7d57b7a-f894-455b-8f20-d780f4b23482%2FCreate%20a%20Project%20in%20eclipse%20using%20SBT%7C78da8a72-6f7d-4f0f-ae4e-03839523879a%2F%29&wdorigin=703
 3) MAVEN
 4) eclipse/Intellij : eclipse ( scala-ide.org)
