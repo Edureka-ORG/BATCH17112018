@@ -1,0 +1,7 @@
+## HDFS Commands
+hadoop version
+hadoop fsck /user/edureka_144865
+hadoop fs -ls /user/edureka_144865
+hadoop fs -ls 
+hdfs dfs -rmr -skipTrash /user/edureka_144865/BATCH17112018
+hadoop fs -ls
