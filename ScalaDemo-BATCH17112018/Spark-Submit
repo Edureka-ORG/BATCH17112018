@@ -1,0 +1,456 @@
+[edureka_144865@ip-20-0-41-62 jars]$ spark2-submit --verbose --master yarn --deploy-mode client --class org.apache.spark.examples.JavaSparkPI 10 100
+Using properties file: /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf
+Adding default property: spark.port.maxRetries=1000
+Adding default property: spark.serializer=org.apache.spark.serializer.KryoSerializer
+Adding default property: spark.yarn.jars=local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*
+Adding default property: spark.eventLog.enabled=true
+Adding default property: spark.hadoop.mapreduce.application.classpath=
+Adding default property: spark.shuffle.service.enabled=true
+Adding default property: spark.driver.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.yarn.historyServer.address=http://ip-20-0-21-196.ec2.internal:18089
+Adding default property: spark.ui.enabled=false
+Adding default property: spark.ui.killEnabled=true
+Adding default property: spark.sql.hive.metastore.jars=${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*
+Adding default property: spark.dynamicAllocation.schedulerBacklogTimeout=1
+Adding default property: spark.yarn.am.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.driver.memory=512m
+Adding default property: spark.yarn.config.gatewayPath=/opt/cloudera/parcels
+Adding default property: spark.yarn.config.replacementPath={{HADOOP_COMMON_HOME}}/../../..
+Adding default property: spark.submit.deployMode=client
+Adding default property: spark.shuffle.service.port=7337
+Adding default property: spark.master=yarn
+Adding default property: spark.authenticate=false
+Adding default property: spark.executor.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+18/11/25 18:01:31 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at map at JavaSparkPi.java:48)
+Adding default property: spark.eventLog.dir=hdfs://nameservice1/user/spark/applicationHistory
+Adding default property: spark.dynamicAllocation.enabled=false
+Adding default property: spark.sql.catalogImplementation=hive
+Adding default property: spark.hadoop.yarn.application.classpath=
+Adding default property: spark.dynamicAllocation.minExecutors=0
+Adding default property: spark.dynamicAllocation.executorIdleTimeout=60
+Adding default property: spark.sql.hive.metastore.version=1.1.0
+Parsed arguments:
+  master                  yarn
+  deployMode              client
+  executorMemory          null
+  executorCores           null
+  totalExecutorCores      null
+  propertiesFile          /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf
+  driverMemory            512m
+  driverCores             null
+  driverExtraClassPath    null
+  driverExtraLibraryPath  /opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+  driverExtraJavaOptions  null
+  supervise               false
+  queue                   null
+  numExecutors            null
+  files                   null
+  pyFiles                 null
+  archives                null
+  mainClass               org.apache.spark.examples.JavaSparkPI
+  primaryResource         file:/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/10
+  name                    org.apache.spark.examples.JavaSparkPI
+  childArgs               [100]
+  jars                    null
+  packages                null
+  packagesExclusions      null
+  repositories            null
+  verbose                 true
+
+Spark properties used, including those specified through
+ --conf and those from the properties file /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf:
+  (spark.executor.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.driver.memory,512m)
+  (spark.authenticate,false)
+  (spark.yarn.jars,local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*)
+  (spark.driver.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.yarn.historyServer.address,http://ip-20-0-21-196.ec2.internal:18089)
+  (spark.yarn.am.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.eventLog.enabled,true)
+  (spark.dynamicAllocation.schedulerBacklogTimeout,1)
+  (spark.yarn.config.gatewayPath,/opt/cloudera/parcels)
+  (spark.ui.killEnabled,true)
+  (spark.serializer,org.apache.spark.serializer.KryoSerializer)
+  (spark.dynamicAllocation.executorIdleTimeout,60)
+  (spark.dynamicAllocation.minExecutors,0)
+  (spark.shuffle.service.enabled,true)
+  (spark.hadoop.yarn.application.classpath,)
+  (spark.yarn.config.replacementPath,{{HADOOP_COMMON_HOME}}/../../..)
+  (spark.ui.enabled,false)
+  (spark.sql.hive.metastore.version,1.1.0)
+  (spark.submit.deployMode,client)
+  (spark.shuffle.service.port,7337)
+  (spark.hadoop.mapreduce.application.classpath,)
+  (spark.eventLog.dir,hdfs://nameservice1/user/spark/applicationHistory)
+  (spark.master,yarn)
+  (spark.port.maxRetries,1000)
+  (spark.dynamicAllocation.enabled,false)
+  (spark.sql.catalogImplementation,hive)
+  (spark.sql.hive.metastore.jars,${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*)
+
+    
+Main class:
+org.apache.spark.examples.JavaSparkPI
+Arguments:
+100
+System properties:
+(spark.executor.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.driver.memory,512m)
+(spark.authenticate,false)
+(spark.yarn.jars,local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*)
+(spark.driver.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.yarn.am.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.yarn.historyServer.address,http://ip-20-0-21-196.ec2.internal:18089)
+(spark.eventLog.enabled,true)
+(spark.dynamicAllocation.schedulerBacklogTimeout,1)
+(SPARK_SUBMIT,true)
+(spark.yarn.config.gatewayPath,/opt/cloudera/parcels)
+[edureka_144865@ip-20-0-41-62 jars]$ spark2-submit --verbose --master yarn --deploy-mode client --class org.apache.spark.examples.JavaSparkPi 10 100
+Using properties file: /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf
+Adding default property: spark.port.maxRetries=1000
+Adding default property: spark.serializer=org.apache.spark.serializer.KryoSerializer
+Adding default property: spark.yarn.jars=local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*
+Adding default property: spark.eventLog.enabled=true
+Adding default property: spark.hadoop.mapreduce.application.classpath=
+Adding default property: spark.shuffle.service.enabled=true
+Adding default property: spark.driver.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.yarn.historyServer.address=http://ip-20-0-21-196.ec2.internal:18089
+Adding default property: spark.ui.enabled=false
+Adding default property: spark.ui.killEnabled=true
+Adding default property: spark.sql.hive.metastore.jars=${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*
+Adding default property: spark.dynamicAllocation.schedulerBacklogTimeout=1
+Adding default property: spark.yarn.am.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.driver.memory=512m
+Adding default property: spark.yarn.config.gatewayPath=/opt/cloudera/parcels
+Adding default property: spark.yarn.config.replacementPath={{HADOOP_COMMON_HOME}}/../../..
+Adding default property: spark.submit.deployMode=client
+Adding default property: spark.shuffle.service.port=7337
+Adding default property: spark.master=yarn
+Adding default property: spark.authenticate=false
+Adding default property: spark.executor.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.eventLog.dir=hdfs://nameservice1/user/spark/applicationHistory
+Adding default property: spark.dynamicAllocation.enabled=false
+Adding default property: spark.sql.catalogImplementation=hive
+Adding default property: spark.hadoop.yarn.application.classpath=
+Adding default property: spark.dynamicAllocation.minExecutors=0
+Adding default property: spark.dynamicAllocation.executorIdleTimeout=60
+Adding default property: spark.sql.hive.metastore.version=1.1.0
+Parsed arguments:
+  master                  yarn
+  deployMode              client
+  executorMemory          null
+  executorCores           null
+  totalExecutorCores      null
+  propertiesFile          /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf
+  driverMemory            512m
+  driverCores             null
+  driverExtraClassPath    null
+  driverExtraLibraryPath  /opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+  driverExtraJavaOptions  null
+  supervise               false
+  queue                   null
+  numExecutors            null
+  files                   null
+  pyFiles                 null
+  archives                null
+  mainClass               org.apache.spark.examples.JavaSparkPi
+  primaryResource         file:/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/10
+  name                    org.apache.spark.examples.JavaSparkPi
+  childArgs               [100]
+  jars                    null
+  packages                null
+  packagesExclusions      null
+  repositories            null
+  verbose                 true
+
+Spark properties used, including those specified through
+ --conf and those from the properties file /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf:
+  (spark.executor.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.driver.memory,512m)
+  (spark.authenticate,false)
+  (spark.yarn.jars,local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*)
+  (spark.driver.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.yarn.historyServer.address,http://ip-20-0-21-196.ec2.internal:18089)
+  (spark.yarn.am.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.eventLog.enabled,true)
+  (spark.dynamicAllocation.schedulerBacklogTimeout,1)
+  (spark.yarn.config.gatewayPath,/opt/cloudera/parcels)
+  (spark.ui.killEnabled,true)
+  (spark.serializer,org.apache.spark.serializer.KryoSerializer)
+  (spark.dynamicAllocation.executorIdleTimeout,60)
+  (spark.dynamicAllocation.minExecutors,0)
+  (spark.shuffle.service.enabled,true)
+  (spark.hadoop.yarn.application.classpath,)
+  (spark.yarn.config.replacementPath,{{HADOOP_COMMON_HOME}}/../../..)
+  (spark.ui.enabled,false)
+  (spark.sql.hive.metastore.version,1.1.0)
+  (spark.submit.deployMode,client)
+  (spark.shuffle.service.port,7337)
+  (spark.hadoop.mapreduce.application.classpath,)
+  (spark.eventLog.dir,hdfs://nameservice1/user/spark/applicationHistory)
+  (spark.master,yarn)
+  (spark.port.maxRetries,1000)
+  (spark.dynamicAllocation.enabled,false)
+  (spark.sql.catalogImplementation,hive)
+  (spark.sql.hive.metastore.jars,${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*)
+
+    
+Main class:
+org.apache.spark.examples.JavaSparkPi
+Arguments:
+100
+System properties:
+(spark.executor.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.driver.memory,512m)
+(spark.authenticate,false)
+(spark.yarn.jars,local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*)
+(spark.driver.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.yarn.am.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.yarn.historyServer.address,http://ip-20-0-21-196.ec2.internal:18089)
+(spark.eventLog.enabled,true)
+(spark.dynamicAllocation.schedulerBacklogTimeout,1)
+(SPARK_SUBMIT,true)
+(spark.yarn.config.gatewayPath,/opt/cloudera/parcels)
+(spark.ui.killEnabled,true)
+[edureka_144865@ip-20-0-41-62 jars]$ spark2-submit --verbose --master yarn --deploy-mode client --class org.apache.spark.examples.JavaSparkPi spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar 10 100
+Using properties file: /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf
+Adding default property: spark.port.maxRetries=1000
+Adding default property: spark.serializer=org.apache.spark.serializer.KryoSerializer
+Adding default property: spark.yarn.jars=local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*
+Adding default property: spark.eventLog.enabled=true
+Adding default property: spark.hadoop.mapreduce.application.classpath=
+Adding default property: spark.shuffle.service.enabled=true
+Adding default property: spark.driver.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.yarn.historyServer.address=http://ip-20-0-21-196.ec2.internal:18089
+Adding default property: spark.ui.enabled=false
+Adding default property: spark.ui.killEnabled=true
+Adding default property: spark.sql.hive.metastore.jars=${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*
+Adding default property: spark.dynamicAllocation.schedulerBacklogTimeout=1
+Adding default property: spark.yarn.am.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.driver.memory=512m
+Adding default property: spark.yarn.config.gatewayPath=/opt/cloudera/parcels
+Adding default property: spark.yarn.config.replacementPath={{HADOOP_COMMON_HOME}}/../../..
+Adding default property: spark.submit.deployMode=client
+Adding default property: spark.shuffle.service.port=7337
+Adding default property: spark.master=yarn
+Adding default property: spark.authenticate=false
+Adding default property: spark.executor.extraLibraryPath=/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+Adding default property: spark.eventLog.dir=hdfs://nameservice1/user/spark/applicationHistory
+Adding default property: spark.dynamicAllocation.enabled=false
+Adding default property: spark.sql.catalogImplementation=hive
+Adding default property: spark.hadoop.yarn.application.classpath=
+Adding default property: spark.dynamicAllocation.minExecutors=0
+Adding default property: spark.dynamicAllocation.executorIdleTimeout=60
+Adding default property: spark.sql.hive.metastore.version=1.1.0
+Parsed arguments:
+  master                  yarn
+  deployMode              client
+  executorMemory          null
+  executorCores           null
+  totalExecutorCores      null
+  propertiesFile          /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf
+  driverMemory            512m
+  driverCores             null
+  driverExtraClassPath    null
+  driverExtraLibraryPath  /opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native
+  driverExtraJavaOptions  null
+  supervise               false
+  queue                   null
+  numExecutors            null
+  files                   null
+  pyFiles                 null
+  archives                null
+  mainClass               org.apache.spark.examples.JavaSparkPi
+  primaryResource         file:/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar
+  name                    org.apache.spark.examples.JavaSparkPi
+  childArgs               [10 100]
+  jars                    null
+  packages                null
+  packagesExclusions      null
+  repositories            null
+  verbose                 true
+
+Spark properties used, including those specified through
+ --conf and those from the properties file /opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/conf/spark-defaults.conf:
+  (spark.executor.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.driver.memory,512m)
+  (spark.authenticate,false)
+  (spark.yarn.jars,local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*)
+  (spark.driver.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.yarn.historyServer.address,http://ip-20-0-21-196.ec2.internal:18089)
+  (spark.yarn.am.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+  (spark.eventLog.enabled,true)
+  (spark.dynamicAllocation.schedulerBacklogTimeout,1)
+  (spark.yarn.config.gatewayPath,/opt/cloudera/parcels)
+  (spark.ui.killEnabled,true)
+  (spark.serializer,org.apache.spark.serializer.KryoSerializer)
+  (spark.dynamicAllocation.executorIdleTimeout,60)
+  (spark.dynamicAllocation.minExecutors,0)
+  (spark.shuffle.service.enabled,true)
+  (spark.hadoop.yarn.application.classpath,)
+  (spark.yarn.config.replacementPath,{{HADOOP_COMMON_HOME}}/../../..)
+  (spark.ui.enabled,false)
+  (spark.sql.hive.metastore.version,1.1.0)
+  (spark.submit.deployMode,client)
+  (spark.shuffle.service.port,7337)
+  (spark.hadoop.mapreduce.application.classpath,)
+  (spark.eventLog.dir,hdfs://nameservice1/user/spark/applicationHistory)
+  (spark.master,yarn)
+  (spark.port.maxRetries,1000)
+  (spark.dynamicAllocation.enabled,false)
+  (spark.sql.catalogImplementation,hive)
+  (spark.sql.hive.metastore.jars,${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*)
+
+    
+Main class:
+org.apache.spark.examples.JavaSparkPi
+Arguments:
+10
+100
+System properties:
+(spark.executor.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.driver.memory,512m)
+(spark.authenticate,false)
+(spark.yarn.jars,local:/opt/cloudera/parcels/SPARK2-2.1.0.cloudera2-1.cdh5.7.0.p0.171658/lib/spark2/jars/*)
+(spark.driver.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.yarn.am.extraLibraryPath,/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop/lib/native)
+(spark.yarn.historyServer.address,http://ip-20-0-21-196.ec2.internal:18089)
+(spark.eventLog.enabled,true)
+(spark.dynamicAllocation.schedulerBacklogTimeout,1)
+(SPARK_SUBMIT,true)
+(spark.yarn.config.gatewayPath,/opt/cloudera/parcels)
+(spark.ui.killEnabled,true)
+(spark.serializer,org.apache.spark.serializer.KryoSerializer)
+(spark.app.name,org.apache.spark.examples.JavaSparkPi)
+(spark.dynamicAllocation.executorIdleTimeout,60)
+(spark.dynamicAllocation.minExecutors,0)
+(spark.shuffle.service.enabled,true)
+(spark.hadoop.yarn.application.classpath,)
+(spark.yarn.config.replacementPath,{{HADOOP_COMMON_HOME}}/../../..)
+(spark.ui.enabled,false)
+(spark.sql.hive.metastore.version,1.1.0)
+(spark.jars,file:/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar)
+(spark.submit.deployMode,client)
+(spark.shuffle.service.port,7337)
+(spark.hadoop.mapreduce.application.classpath,)
+(spark.eventLog.dir,hdfs://nameservice1/user/spark/applicationHistory)
+(spark.master,yarn)
+(spark.port.maxRetries,1000)
+(spark.dynamicAllocation.enabled,false)
+(spark.sql.catalogImplementation,hive)
+(spark.sql.hive.metastore.jars,${env:HADOOP_COMMON_HOME}/../hive/lib/*:${env:HADOOP_COMMON_HOME}/client/*)
+Classpath elements:
+file:/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar
+
+
+18/11/25 18:01:17 INFO spark.SparkContext: Running Spark version 2.1.0.cloudera2
+18/11/25 18:01:18 INFO spark.SecurityManager: Changing view acls to: edureka_144865
+18/11/25 18:01:18 INFO spark.SecurityManager: Changing modify acls to: edureka_144865
+18/11/25 18:01:18 INFO spark.SecurityManager: Changing view acls groups to: 
+18/11/25 18:01:18 INFO spark.SecurityManager: Changing modify acls groups to: 
+18/11/25 18:01:18 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(edureka_144865); groups with view permissions: Set(); users  with modify permissions: Set(edureka_144865); groups with modify permissions: Set()
+18/11/25 18:01:19 INFO util.Utils: Successfully started service 'sparkDriver' on port 34739.
+18/11/25 18:01:19 INFO spark.SparkEnv: Registering MapOutputTracker
+18/11/25 18:01:19 INFO spark.SparkEnv: Registering BlockManagerMaster
+18/11/25 18:01:19 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/11/25 18:01:19 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/11/25 18:01:19 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-a7607369-8ccd-4bdc-9bc5-dc7e1cfe3657
+18/11/25 18:01:19 INFO memory.MemoryStore: MemoryStore started with capacity 100.8 MB
+18/11/25 18:01:20 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+18/11/25 18:01:20 INFO spark.SparkContext: Added JAR file:/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar at spark://20.0.41.62:34739/jars/spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar with timestamp 1543168880055
+18/11/25 18:01:22 INFO yarn.Client: Requesting a new application from cluster with 3 NodeManagers
+18/11/25 18:01:22 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (4096 MB per container)
+18/11/25 18:01:22 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+18/11/25 18:01:22 INFO yarn.Client: Setting up container launch context for our AM
+18/11/25 18:01:22 INFO yarn.Client: Setting up the launch environment for our AM container
+18/11/25 18:01:22 INFO yarn.Client: Preparing resources for our AM container
+18/11/25 18:01:23 INFO yarn.Client: Uploading resource file:/tmp/spark-f322357c-eeaa-42bb-8ce9-14a82cabc3fd/__spark_conf__3826047577398868647.zip -> hdfs://nameservice1/user/edureka_144865/.sparkStaging/application_1528714825862_63985/__spark_conf__.zip
+18/11/25 18:01:24 INFO spark.SecurityManager: Changing view acls to: edureka_144865
+18/11/25 18:01:24 INFO spark.SecurityManager: Changing modify acls to: edureka_144865
+18/11/25 18:01:24 INFO spark.SecurityManager: Changing view acls groups to: 
+18/11/25 18:01:24 INFO spark.SecurityManager: Changing modify acls groups to: 
+18/11/25 18:01:24 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(edureka_144865); groups with view permissions: Set(); users  with modify permissions: Set(edureka_144865); groups with modify permissions: Set()
+18/11/25 18:01:24 INFO yarn.Client: Submitting application application_1528714825862_63985 to ResourceManager
+18/11/25 18:01:24 INFO impl.YarnClientImpl: Submitted application application_1528714825862_63985
+18/11/25 18:01:24 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1528714825862_63985 and attemptId None
+18/11/25 18:01:25 INFO yarn.Client: Application report for application_1528714825862_63985 (state: ACCEPTED)
+18/11/25 18:01:25 INFO yarn.Client: 
+         client token: N/A
+         diagnostics: N/A
+         ApplicationMaster host: N/A
+         ApplicationMaster RPC port: -1
+         queue: root.default
+         start time: 1543168797902
+         final status: UNDEFINED
+         tracking URL: http://ip-20-0-21-161.ec2.internal:8088/proxy/application_1528714825862_63985/
+         user: edureka_144865
+18/11/25 18:01:26 INFO yarn.Client: Application report for application_1528714825862_63985 (state: ACCEPTED)
+18/11/25 18:01:27 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+18/11/25 18:01:27 INFO yarn.Client: Application report for application_1528714825862_63985 (state: ACCEPTED)
+18/11/25 18:01:27 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> ip-20-0-21-161.ec2.internal,ip-20-0-21-196.ec2.internal, PROXY_URI_BASES -> http://ip-20-0-21-161.ec2.internal:8088/proxy/application_1528714825862_63985,http://ip-20-0-21-196.ec2.internal:8088/proxy/application_1528714825862_63985), /proxy/application_1528714825862_63985
+18/11/25 18:01:28 INFO yarn.Client: Application report for application_1528714825862_63985 (state: RUNNING)
+18/11/25 18:01:28 INFO yarn.Client: 
+         client token: N/A
+         diagnostics: N/A
+         ApplicationMaster host: 20.0.31.221
+         ApplicationMaster RPC port: 0
+         queue: root.default
+         start time: 1543168797902
+         final status: UNDEFINED
+         tracking URL: http://ip-20-0-21-161.ec2.internal:8088/proxy/application_1528714825862_63985/
+         user: edureka_144865
+18/11/25 18:01:28 INFO cluster.YarnClientSchedulerBackend: Application application_1528714825862_63985 has started running.
+18/11/25 18:01:28 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35609.
+18/11/25 18:01:28 INFO netty.NettyBlockTransferService: Server created on 20.0.41.62:35609
+18/11/25 18:01:28 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/11/25 18:01:28 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 20.0.41.62, 35609, None)
+18/11/25 18:01:28 INFO storage.BlockManagerMasterEndpoint: Registering block manager 20.0.41.62:35609 with 100.8 MB RAM, BlockManagerId(driver, 20.0.41.62, 35609, None)
+18/11/25 18:01:28 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 20.0.41.62, 35609, None)
+18/11/25 18:01:28 INFO storage.BlockManager: external shuffle service port = 7337
+18/11/25 18:01:28 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 20.0.41.62, 35609, None)
+18/11/25 18:01:28 INFO util.log: Logging initialized @12851ms
+18/11/25 18:01:28 INFO scheduler.EventLoggingListener: Logging events to hdfs://nameservice1/user/spark/applicationHistory/application_1528714825862_63985
+18/11/25 18:01:30 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (20.0.31.221:47152) with ID 2
+18/11/25 18:01:30 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-20-0-31-221.ec2.internal:45743 with 366.3 MB RAM, BlockManagerId(2, ip-20-0-31-221.ec2.internal, 45743, None)
+18/11/25 18:01:30 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(null) (20.0.31.221:47154) with ID 1
+18/11/25 18:01:30 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+18/11/25 18:01:30 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-20-0-31-221.ec2.internal:43863 with 366.3 MB RAM, BlockManagerId(1, ip-20-0-31-221.ec2.internal, 43863, None)
+18/11/25 18:01:30 INFO spark.SparkContext: Starting job: reduce at JavaSparkPi.java:48
+18/11/25 18:01:30 INFO scheduler.DAGScheduler: Got job 0 (reduce at JavaSparkPi.java:48) with 2 output partitions
+18/11/25 18:01:30 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (reduce at JavaSparkPi.java:48)
+18/11/25 18:01:30 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/11/25 18:01:30 INFO scheduler.DAGScheduler: Missing parents: List()
+18/11/25 18:01:30 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at map at JavaSparkPi.java:48), which has no missing parents
+18/11/25 18:01:31 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 2.3 KB, free 100.8 MB)
+18/11/25 18:01:31 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1383.0 B, free 100.8 MB)
+18/11/25 18:01:31 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 20.0.41.62:35609 (size: 1383.0 B, free: 100.8 MB)
+18/11/25 18:01:31 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:991
+18/11/25 18:01:31 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at map at JavaSparkPi.java:48)
+18/11/25 18:01:31 INFO cluster.YarnScheduler: Adding task set 0.0 with 2 tasks
+18/11/25 18:01:31 WARN scheduler.TaskSetManager: Stage 0 contains a task of very large size (390 KB). The maximum recommended task size is 100 KB.
+18/11/25 18:01:31 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, ip-20-0-31-221.ec2.internal, executor 2, partition 0, PROCESS_LOCAL, 399655 bytes)
+18/11/25 18:01:31 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, ip-20-0-31-221.ec2.internal, executor 1, partition 1, PROCESS_LOCAL, 407951 bytes)
+18/11/25 18:01:33 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-20-0-31-221.ec2.internal:43863 (size: 1383.0 B, free: 366.3 MB)
+18/11/25 18:01:33 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-20-0-31-221.ec2.internal:45743 (size: 1383.0 B, free: 366.3 MB)
+18/11/25 18:01:33 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1573 ms on ip-20-0-31-221.ec2.internal (executor 2) (1/2)
+18/11/25 18:01:33 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1521 ms on ip-20-0-31-221.ec2.internal (executor 1) (2/2)
+18/11/25 18:01:33 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/11/25 18:01:33 INFO scheduler.DAGScheduler: ResultStage 0 (reduce at JavaSparkPi.java:48) finished in 1.726 s
+18/11/25 18:01:33 INFO scheduler.DAGScheduler: Job 0 finished: reduce at JavaSparkPi.java:48, took 2.672104 s
+Pi is roughly 3.14782
+18/11/25 18:01:40 INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+18/11/25 18:01:40 INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+18/11/25 18:01:40 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+18/11/25 18:01:40 INFO cluster.SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+18/11/25 18:01:40 INFO cluster.YarnClientSchedulerBackend: Stopped
+18/11/25 18:01:40 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/11/25 18:01:40 INFO memory.MemoryStore: MemoryStore cleared
+18/11/25 18:01:40 INFO storage.BlockManager: BlockManager stopped
+18/11/25 18:01:40 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+18/11/25 18:01:40 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/11/25 18:01:40 INFO spark.SparkContext: Successfully stopped SparkContext
+18/11/25 18:01:40 INFO util.ShutdownHookManager: Shutdown hook called
+18/11/25 18:01:40 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-f322357c-eeaa-42bb-8ce9-14a82cabc3fd

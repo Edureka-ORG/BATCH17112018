@@ -1,2 +1,46 @@
 ##WATSAPP GROUP ##
 https://chat.whatsapp.com/GgAwM5oymKxE2W5sakGU8q
+
+
+#READ UNIX COMMANDS
+
+ps -ef | grep spark
+
+nc -lk
+
+telnet
+
+### SPARK-COMMANDS
+
+spark2-submit --verbose --master yarn --deploy-mode client --class org.apache.spark.examples.JavaSparkPi spark-examples-1.6.0-cdh5.11.1-hadoop2.6.0-cdh5.11.1.jar 10 100
+
+which spark2-submit
+
+cat /bin/spark2-submit
+
+#!/bin/bash
+  # Reference: http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+  SOURCE="${BASH_SOURCE[0]}"
+  BIN_DIR="$( dirname "$SOURCE" )"
+  while [ -h "$SOURCE" ]
+  do
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+    BIN_DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"
+  done
+  BIN_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  CDH_LIB_DIR=$BIN_DIR/../../CDH/lib
+  LIB_DIR=$BIN_DIR/../lib
+export HADOOP_HOME=$CDH_LIB_DIR/hadoop
+# Autodetect JAVA_HOME if not defined
+. $CDH_LIB_DIR/bigtop-utils/bigtop-detect-javahome
+exec $LIB_DIR/spark2/bin/spark-submit "$@"
+
+
+cat /bin/spark-submit
+
+org.apache.spark.deploy.SparkSubmit 
+
+https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala
+
+870 line number
