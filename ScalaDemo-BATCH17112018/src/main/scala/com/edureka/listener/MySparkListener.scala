@@ -20,6 +20,11 @@ import org.apache.spark.scheduler.SparkListenerStageSubmitted
 import org.apache.spark.scheduler.SparkListenerExecutorAdded
 import org.apache.spark.scheduler.SparkListenerBlockManagerAdded
 import org.apache.spark.SparkContext
+import org.apache.spark.util.JsonProtocolWrapper
+
+import org.json4s.JsonDSL._
+import org.json4s.jackson.JsonMethods._
+
 
 class MySparkListener extends SparkListener
 {
@@ -27,6 +32,12 @@ class MySparkListener extends SparkListener
   def publishEvent(event:SparkListenerEvent):Unit = {
     
     var appId = SparkContext.getOrCreate().applicationId;
+    
+    var json = JsonProtocolWrapper.sparkEventToJson(event);
+    
+     val completeJson = ("timestamp" -> System.currentTimeMillis()) ~
+      ("application-id" -> appId) ~
+      ("spark-event" -> json)
     
     
   }
