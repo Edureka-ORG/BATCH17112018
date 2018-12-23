@@ -19,9 +19,17 @@ import org.apache.spark.scheduler.SparkListenerBlockUpdated
 import org.apache.spark.scheduler.SparkListenerStageSubmitted
 import org.apache.spark.scheduler.SparkListenerExecutorAdded
 import org.apache.spark.scheduler.SparkListenerBlockManagerAdded
+import org.apache.spark.SparkContext
 
 class MySparkListener extends SparkListener
 {
+  
+  def publishEvent(event:SparkListenerEvent):Unit = {
+    
+    var appId = SparkContext.getOrCreate().applicationId;
+    
+    
+  }
   
    override def onStageCompleted(stageCompleted: SparkListenerStageCompleted): Unit = { }
 
@@ -33,9 +41,13 @@ class MySparkListener extends SparkListener
 
   override def onTaskEnd(taskEnd: SparkListenerTaskEnd): Unit = { }
 
-  override def onJobStart(jobStart: SparkListenerJobStart): Unit = { }
+  override def onJobStart(jobStart: SparkListenerJobStart): Unit = { 
+    publishEvent(jobStart)
+  }
 
-  override def onJobEnd(jobEnd: SparkListenerJobEnd): Unit = { }
+  override def onJobEnd(jobEnd: SparkListenerJobEnd): Unit = {
+     publishEvent(jobEnd)
+  }
 
   override def onEnvironmentUpdate(environmentUpdate: SparkListenerEnvironmentUpdate): Unit = { }
 
@@ -46,9 +58,13 @@ class MySparkListener extends SparkListener
 
   override def onUnpersistRDD(unpersistRDD: SparkListenerUnpersistRDD): Unit = { }
 
-  override def onApplicationStart(applicationStart: SparkListenerApplicationStart): Unit = { }
+  override def onApplicationStart(applicationStart: SparkListenerApplicationStart): Unit = { 
+    publishEvent(applicationStart);
+  }
 
-  override def onApplicationEnd(applicationEnd: SparkListenerApplicationEnd): Unit = { }
+  override def onApplicationEnd(applicationEnd: SparkListenerApplicationEnd): Unit = {
+    publishEvent(applicationEnd);
+  }
 
   override def onExecutorMetricsUpdate(
       executorMetricsUpdate: SparkListenerExecutorMetricsUpdate): Unit = { }
