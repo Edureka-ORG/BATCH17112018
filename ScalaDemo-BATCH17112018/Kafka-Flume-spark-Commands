@@ -23,3 +23,19 @@ flume-ng agent --conf conf --conf-file flume.conf --name a1 -Dflume.root.logger=
 
 
 flume-ng agent --conf conf --conf-file flume-kafka.conf --name agent1 -Dflume.root.logger=INFO,console
+
+
+## SPARK-STREAMING-WITH-KAFKA
+
+spark2-submit --verbose --master local[4] --deploy-mode client --class com.edureka.consumer.KafkaWordCount scalademo-batch171
+12018_2.11-1.0-SNAPSHOT.jar ip-20-0-21-196.ec2.internal:2181 my-consumer-group BATCH17112018-TOPIC 4 
+
+## SPARK-STREAMING-WITH-FLUME
+
+##SPARK-COMMAND
+spark2-submit --verbose --master local[4] --deploy-mode client --class com.edureka.consumer.KafkaWordCount scalademo-batch171
+12018_2.11-1.0-SNAPSHOT.jar ip-20-0-21-196.ec2.internal:2181 my-consumer-group BATCH17112018-TOPIC 4 > flume-logs/sparkstreaming.log 2>&1
+
+##FLUME-COMMAND
+
+flume-ng agent --conf conf --conf-file flume-streaming.conf --name stlog -Dflume.root.logger=INFO,console
