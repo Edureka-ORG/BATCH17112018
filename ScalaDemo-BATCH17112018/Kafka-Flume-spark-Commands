@@ -27,8 +27,7 @@ flume-ng agent --conf conf --conf-file flume-kafka.conf --name agent1 -Dflume.ro
 
 ## SPARK-STREAMING-WITH-KAFKA
 
-spark2-submit --verbose --master local[4] --deploy-mode client --class com.edureka.consumer.KafkaWordCount scalademo-batch171
-12018_2.11-1.0-SNAPSHOT.jar ip-20-0-21-196.ec2.internal:2181 my-consumer-group BATCH17112018-TOPIC 4 
+spark2-submit --verbose --master local[4] --deploy-mode client --class com.edureka.consumer.KafkaWordCount scalademo-batch17112018_2.11-1.0-SNAPSHOT.jar ip-20-0-21-196.ec2.internal:2181 my-consumer-group BATCH17112018-TOPIC 4 
 
 ## SPARK-STREAMING-WITH-FLUME
 
@@ -39,3 +38,15 @@ spark2-submit --verbose --master local[4] --deploy-mode client --class com.edure
 ##FLUME-COMMAND
 
 flume-ng agent --conf conf --conf-file flume-streaming.conf --name stlog -Dflume.root.logger=INFO,console
+
+
+## PROJECT
+
+1) Run WordCountDriver <-- Lister
+spark2-submit --verbose --conf spark.extraListeners=com.edureka.listener.MySparkListener --repositories https://repo.maven.apache.org/maven2 --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.1 --master local[4] --deploy-mode client --class com.edureka.spark.WordCountDriver scalademo-batch17112018_2.11-1.0-SNAPSHOT.jar /user/edureka_144865/WordCount.txt /user/edureka_144865/WCOP3
+ 
+ spark2-shell --verbose --conf spark.extraListeners=com.edureka.listener.MySparkListener --conf spark.driver.extraClassPath=/mnt/home/edureka_144865/scalademo-batch17112018_2.11-1.0-SNAPSHOT.jar --repositories https://repo.maven.apache.org/maven2 --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.1 --master local[4] --deploy-mode client 
+ 
+ 
+ 
+ 
